@@ -7,14 +7,22 @@
 
     <h3>Browse Clothing</h3>
 
-    {% for item in clothing_items %}
-        <h4>{{ item.name }}</h4>
-        <p>€{{ "%.2f"|format(item.price) }}</p>
+    <div class="clothing-list">
+        {% for item in clothing_items %}
+            <div class="clothing-item">
+                <h4>{{ item.name }}</h4>
 
-        <a href="{{ url_for('item_details', item_id=item.id) }}">
-            View details
-        </a>
-    {% else %}
-        <p>No clothing items available.</p>
-    {% endfor %}
+                <p class="price">
+                    €{{ "%.2f"|format(item.price) }}
+                </p>
+
+                <a class="button"
+                   href="{{ url_for('item_details', item_id=item.id) }}">
+                    View details
+                </a>
+            </div>
+        {% else %}
+            <p>No clothing items available.</p>
+        {% endfor %}
+    </div>
 {% endblock %}

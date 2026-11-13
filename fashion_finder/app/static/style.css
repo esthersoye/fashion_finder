@@ -45,3 +45,18 @@ main {
     color: #713b50;
     padding: 10px;
 }
+
+.clothing-item {
+    width: 250px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.button {
+    text-decoration: none;
+    border: 1px solid #713b50;
+}
+
+.button:hover {
+    background-color: #e8b9cc;
+}
