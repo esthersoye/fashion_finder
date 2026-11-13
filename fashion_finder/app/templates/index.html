@@ -5,10 +5,43 @@
 
     <p>Find clothing that suits your style and budget.</p>
 
+    <form method="get" action="{{ url_for('index') }}">
+        <label for="colour">Colour:</label>
+        <select name="colour" id="colour">
+            <option value="">All colours</option>
+            {% for colour in colours %}
+                <option value="{{ colour }}"
+                    {% if selected_colour == colour %}selected{% endif %}>
+                    {{ colour }}
+                </option>
+            {% endfor %}
+        </select>
+
+        <label for="max_price">Maximum price (€):</label>
+        <input
+            type="number"
+            name="max_price"
+            id="max_price"
+            min="0"
+            step="0.01"
+            value="{{ max_price }}"
+        >
+
+        <button type="submit">Filter</button>
+        <a href="{{ url_for('index') }}">Clear filters</a>
+    </form>
+
+    {% if error %}
+        <p>{{ error }}</p>
+    {% endif %}
+
     <h3>Browse Clothing</h3>
 
     {% for item in clothing_items %}
         <h4>{{ item.name }}</h4>
-        <p>€{{ item.price }}</p>
+        <p>{{ item.brand }} | {{ item.colour }}</p>
+        <p>€{{ "%.2f"|format(item.price) }}</p>
+    {% else %}
+        <p>No clothing items match your filters.</p>
     {% endfor %}
 {% endblock %}
