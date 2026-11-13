@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    {% if title %}
+        <title>{{ title }} - Fashion Finder</title>
+    {% else %}
+        <title>Fashion Finder</title>
+    {% endif %}
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1>Fashion Finder</h1>
+        <p>Find clothing that matches your style.</p>
+
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('about') }}">About Us</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>Fashion Finder | Esther Aribasoye</p>
+    </footer>
+</body>
+</html>

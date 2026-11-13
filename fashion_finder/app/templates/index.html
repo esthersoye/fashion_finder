@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Welcome to Fashion Finder</h2>
+
+    <p>Find clothing that suits your style and budget.</p>
+
+    <h3>Browse Clothing</h3>
+
+    {% for item in clothing_items %}
+        <h4>{{ item.name }}</h4>
+        <p>€{{ item.price }}</p>
+    {% endfor %}
+{% endblock %}
