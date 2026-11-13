@@ -2,7 +2,7 @@
 
 Fashion Finder is a Flask web application developed by Esther Aribasoye.
 
-The application is designed to help users find clothing by colour and price and view individual clothing item details.
+The application helps users find clothing by colour and maximum price and view individual clothing item details.
 
 ## Current progress
 
@@ -12,12 +12,12 @@ The application is designed to help users find clothing by colour and price and 
 - Python scripts to initialise and populate the database.
 - requirements.txt listing package versions.
 
-## Planned database features
+## Completed database features
 
-1. Filter clothing by colour and price.
-2. View individual clothing item details.
+1. Filter clothing by colour and maximum price — filter-clothing branch.
+2. View individual clothing item details — clothing-details branch.
 
-Each feature will be developed on a separate branch and will remain unmerged into main.
+Both feature branches remain unmerged into main. The main branch contains the initial website and database setup files.
 
 ## Sample data
 
