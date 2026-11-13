@@ -9,6 +9,12 @@
 
     {% for item in clothing_items %}
         <h4>{{ item.name }}</h4>
-        <p>€{{ item.price }}</p>
+        <p>€{{ "%.2f"|format(item.price) }}</p>
+
+        <a href="{{ url_for('item_details', item_id=item.id) }}">
+            View details
+        </a>
+    {% else %}
+        <p>No clothing items available.</p>
     {% endfor %}
 {% endblock %}
