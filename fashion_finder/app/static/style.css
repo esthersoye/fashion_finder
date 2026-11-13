@@ -1,26 +1,30 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #fff9f7;
-    color: #333;
+    background-color: #f4f9ff;
+    color: #243b53;
     margin: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 40px);
 }
 
 header, footer {
-    background-color: #f5dce5;
+    background-color: #d6eaff;
     padding: 15px;
 }
 
 nav a {
-    color: #713b50;
+    color: #205493;
     margin-right: 15px;
 }
 
 h1, h2, h3 {
-    color: #713b50;
+    color: #205493;
 }
 
 main {
     padding: 15px 0;
+    flex: 1;
 }
 
 .clothing-list {
@@ -31,19 +35,8 @@ main {
 
 .clothing-item, .about {
     background-color: white;
-    border: 1px solid #d8bdc7;
+    border: 1px solid #a9ccec;
     padding: 15px;
-}
-
-.price {
-    font-weight: bold;
-}
-
-.button {
-    display: inline-block;
-    background-color: #f5dce5;
-    color: #713b50;
-    padding: 10px;
 }
 
 .clothing-item {
@@ -52,11 +45,25 @@ main {
     box-sizing: border-box;
 }
 
+.price {
+    font-weight: bold;
+}
+
 .button {
+    display: inline-block;
+    background-color: #d6eaff;
+    color: #205493;
+    border: 1px solid #205493;
+    padding: 10px;
     text-decoration: none;
-    border: 1px solid #713b50;
 }
 
 .button:hover {
-    background-color: #e8b9cc;
+    background-color: #b8d9f7;
+}
+
+header h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 48px;
+    text-align: center;
 }
